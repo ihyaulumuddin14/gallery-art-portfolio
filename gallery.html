@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un - Gallery | Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  fontFamily: {
+                      sans: ['Inter', 'sans-serif'],
+                  },
+                  colors: {
+                      'dylan-orange': '#f26e47',
+                      'dylan-dark': '#1a1a1a',
+                  }
+              }
+          }
+      }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class=" text-gray-900 font-sans antialiased overflow-x-hidden">
+  <nav class="fixed top-0 w-full flex justify-between items-center p-6 z-50 mix-blend-difference text-white">
+      <div class="font-bold tracking-tighter text-xl cursor-pointer" onclick="location.href='./index.html'">
+          Un Gallery
+      </div>
+      <div class="space-x-6 font-bold hidden md:block">
+          <a href="index.html" class="index nav-btn hover:opacity-70 transition">Home</a>
+          <a href="gallery.html" class="gallery nav-btn hover:opacity-70 transition">Gallery</a>
+          <a href="#contact" class="hover:opacity-70 transition">Contact</a>
+      </div>
+      <div class="md:hidden">
+          <button class="btn btn-square btn-ghost btn-sm" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+      </div>
+  </nav>
+
+  <div id="mobile-menu" class="hidden fixed inset-0 bg-black text-white z-40 flex flex-col justify-center items-center space-y-8 text-2xl font-bold">
+      <a href="index.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="index nav-btn mobile-nav hover:text-gray-400">Home</a>
+      <a href="gallery.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="gallery nav-btn mobile-nav hover:text-gray-400">Gallery</a>
+      <a href="#contact" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="hover:text-gray-400">Contact</a>
+  </div>
+
+  <main id="main-content">
+    <div id="page-services" class="page-section">    
+      <section class="bg-white pt-32 pb-20 px-6 md:px-12">
+        <h1 class="text-7xl md:text-[10rem] font-black-tight uppercase text-gray-200 leading-none mb-12">GALLERY</h1>
+        <div class="max-w-4xl ml-auto md:pr-12">
+          <p class="text-2xl md:text-3xl font-medium text-gray-600 leading-none">
+            A complete collection of my artistic works — experiments, explorations, and finished pieces.
+          </p>
+        </div>
+      </section>
+
+      <section class="flex flex-col px-6 md:px-12 gap-20">
+        <!-- two columns -->
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="h-fit w-full overflow-hidden">
+              <img src="./assets/ads_art.webp" alt="painting" class="group-hover:scale-105 group-hover:brightness-90 transition-all ease-in-out duration-300 w-full h-full object-cover object-center">
+            </div>
+            <div class="flex flex-col gap-6">
+              <h4 class="italic text-xl font-bold">Companion</h4>
+              <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] gap-4 xl:gap-0">
+                <p class="w-full leading-none text-md md:text-base">Tea advertising with a touch of local jargon</p>
+                <p class="w-full text-right font-bold">2023</p>
+              </div>
+            </div>
+          </div>
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="h-fit w-full overflow-hidden">
+              <img src="./assets/aksara_art.webp" alt="painting" class="group-hover:scale-105 group-hover:brightness-90 transition-all ease-in-out duration-300 w-full h-full object-cover object-center">
+            </div>
+            <div class="flex flex-col gap-6">
+              <h4 class="italic text-xl font-bold">Native of Java Script</h4>
+              <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] gap-4 xl:gap-0">
+                <p class="w-full leading-none text-xs md:text-base">a blend of Middle Eastern and Javanese culture in a new style of ancient writing</p>
+                <p class="w-full text-right font-bold">2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- three columns -->
+        <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="h-fit w-full overflow-hidden">
+              <img src="./assets/art_exhibition.webp" alt="painting" class="group-hover:scale-105 group-hover:brightness-90 transition-all ease-in-out duration-300 w-full h-full object-cover object-center">
+            </div>
+            <div class="flex flex-col gap-6">
+              <h4 class="italic text-xl font-bold">Pesta Seni Art Exhibition</h4>
+              <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] gap-4 xl:gap-0">
+                <p class="w-full leading-none text-md md:text-base">The second time my art was included in an exhibition, an exhibition of land for purity.</p>
+                <p class="w-full text-right font-bold">2025</p>
+              </div>
+            </div>
+          </div>
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="h-fit w-full overflow-hidden">
+              <img src="./assets/art_training.webp" alt="painting" class="group-hover:scale-105 group-hover:brightness-90 transition-all ease-in-out duration-300 w-full h-full object-cover object-center">
+            </div>
+            <div class="flex flex-col gap-6">
+              <h4 class="italic text-xl font-bold">Murder of Identity</h4>
+              <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] gap-4 xl:gap-0">
+                <p class="w-full leading-none text-xs md:text-base">Not caring about culture is the same as committing suicide</p>
+                <p class="w-full text-right font-bold">2023</p>
+              </div>
+            </div>
+          </div>
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="h-fit w-full overflow-hidden">
+              <img src="./assets/budi01_art.webp" alt="painting" class="group-hover:scale-105 group-hover:brightness-90 transition-all ease-in-out duration-300 w-full h-full object-cover object-center">
+            </div>
+            <div class="flex flex-col gap-6">
+              <h4 class="italic text-xl font-bold">The Peak of Budi01</h4>
+              <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] gap-4 xl:gap-0">
+                <p class="w-full leading-none text-xs md:text-base">Semi-realistic monochrome pencil art for Budi01's face using the grid technique</p>
+                <p class="w-full text-right font-bold">2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- one columns -->
+        <div class="w-full grid grid-cols-1 md:grid-cols-2">
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="h-full w-full overflow-hidden">
+              <img src="./assets/caricature_art.webp" alt="painting" class="group-hover:scale-105 group-hover:brightness-90 transition-all ease-in-out duration-300 w-full h-full object-cover object-center">
+            </div>
+          </div>
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="flex flex-col gap-6 md:px-5">
+              <h4 class="text-xl font-bold">The Visionary's Joy</h4>
+              <div class="grid grid-cols-1 xl:grid-cols-[70%_30%]">
+                <p class="w-full leading-none text-md md:text-base">Laughter at the dysfunctionality of the government system</p>
+                <p class="w-full text-right font-bold">2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- two columns -->
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="h-fit w-full overflow-hidden">
+              <img src="./assets/cry_art.webp" alt="painting" class="group-hover:scale-105 group-hover:brightness-90 transition-all ease-in-out duration-300 w-full h-full object-cover object-center">
+            </div>
+            <div class="flex flex-col gap-6">
+              <h4 class="italic text-xl font-bold">The Dynamics of Desires</h4>
+              <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] gap-4 xl:gap-0">
+                <p class="w-full leading-none text-md md:text-base">Small changes may be painful, but things will get better.</p>
+                <p class="w-full text-right font-bold">2023</p>
+              </div>
+            </div>
+          </div>
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="h-fit w-full overflow-hidden">
+              <img src="./assets/government_cup.webp" alt="painting" class="group-hover:scale-105 group-hover:brightness-90 transition-all ease-in-out duration-300 w-full h-full object-cover object-center">
+            </div>
+            <div class="flex flex-col gap-6">
+              <h4 class="italic text-xl font-bold">Government Cup</h4>
+              <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] gap-4 xl:gap-0">
+                <p class="w-full leading-none text-xs md:text-base">The ambiguity of the government system is always noticeable.</p>
+                <p class="w-full text-right font-bold">2024</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- three columns -->
+        <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="h-fit w-full overflow-hidden">
+              <img src="./assets/group_studio_art.webp" alt="painting" class="group-hover:scale-105 group-hover:brightness-90 transition-all ease-in-out duration-300 w-full h-full object-cover object-center">
+            </div>
+            <div class="flex flex-col gap-6">
+              <h4 class="italic text-xl font-bold">Studio Art Team</h4>
+              <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] gap-4 xl:gap-0">
+                <p class="w-full leading-none text-md md:text-base">Experience becomes more valuable as time passes.</p>
+                <p class="w-full text-right font-bold">2023</p>
+              </div>
+            </div>
+          </div>
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="h-fit w-full overflow-hidden">
+              <img src="./assets/self_studio_art.webp" alt="painting" class="group-hover:scale-105 group-hover:brightness-90 transition-all ease-in-out duration-300 w-full h-full object-cover object-center">
+            </div>
+            <div class="flex flex-col gap-6">
+              <h4 class="italic text-xl font-bold">Confidence and Deception</h4>
+              <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] gap-4 xl:gap-0">
+                <p class="w-full leading-none text-xs md:text-base">Confidence grows from existential crises, awareness, and indifference.</p>
+                <p class="w-full text-right font-bold">2023</p>
+              </div>
+            </div>
+          </div>
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="h-fit w-full overflow-hidden">
+              <img src="./assets/raffi_art.webp" alt="painting" class="group-hover:scale-105 group-hover:brightness-90 transition-all ease-in-out duration-300 w-full h-full object-cover object-center">
+            </div>
+            <div class="flex flex-col gap-6">
+              <h4 class="italic text-xl font-bold">Raffi Ahmad's purity</h4>
+              <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] gap-4 xl:gap-0">
+                <p class="w-full leading-none text-xs md:text-base">Every person has their time, and every time has its person.</p>
+                <p class="w-full text-right font-bold">2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- one columns -->
+        <div class="w-full grid grid-cols-1 md:grid-cols-2">
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="h-full w-full overflow-hidden">
+              <img src="./assets/painting_art.webp" alt="painting" class="group-hover:scale-105 group-hover:brightness-90 transition-all ease-in-out duration-300 w-full h-full object-cover object-center">
+            </div>
+          </div>
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="flex flex-col gap-6 md:px-5">
+              <h4 class="text-xl font-bold">Vintage Still Life</h4>
+              <div class="grid grid-cols-1 xl:grid-cols-[70%_30%]">
+                <p class="w-full leading-none text-md md:text-base">Classical western culture with a touch of regular realism.</p>
+                <p class="w-full text-right font-bold">2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- two columns -->
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="h-fit w-full overflow-hidden">
+              <img src="./assets/key_art.webp" alt="painting" class="group-hover:scale-105 group-hover:brightness-90 transition-all ease-in-out duration-300 w-full h-full object-cover object-center">
+            </div>
+            <div class="flex flex-col gap-6">
+              <h4 class="italic text-xl font-bold">The Key of Self Growth</h4>
+              <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] gap-4 xl:gap-0">
+                <p class="w-full leading-none text-md md:text-base">The growth of self-worth begins with our reflection at the time it is needed.</p>
+                <p class="w-full text-right font-bold">2023</p>
+              </div>
+            </div>
+          </div>
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="h-fit w-full overflow-hidden">
+              <img src="./assets/quote_art.webp" alt="painting" class="group-hover:scale-105 group-hover:brightness-90 transition-all ease-in-out duration-300 w-full h-full object-cover object-center">
+            </div>
+            <div class="flex flex-col gap-6">
+              <h4 class="italic text-xl font-bold">Quote of That Day</h4>
+              <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] gap-4 xl:gap-0">
+                <p class="w-full leading-none text-xs md:text-base">There's nothing wrong with the result, but if other people only care about that, what are you going to do?</p>
+                <p class="w-full text-right font-bold">2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- three columns -->
+        <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="h-fit w-full overflow-hidden">
+              <img src="./assets/realism.webp" alt="painting" class="group-hover:scale-105 group-hover:brightness-90 transition-all ease-in-out duration-300 w-full h-full object-cover object-center">
+            </div>
+            <div class="flex flex-col gap-6">
+              <h4 class="italic text-xl font-bold">Blue Petals</h4>
+              <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] gap-4 xl:gap-0">
+                <p class="w-full leading-none text-md md:text-base">Freestyle colored pencil based to realism eye to the nerves.</p>
+                <p class="w-full text-right font-bold">2023</p>
+              </div>
+            </div>
+          </div>
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="h-fit w-full overflow-hidden">
+              <img src="./assets/ub_art_competition.webp" alt="painting" class="group-hover:scale-105 group-hover:brightness-90 transition-all ease-in-out duration-300 w-full h-full object-cover object-center">
+            </div>
+            <div class="flex flex-col gap-6">
+              <h4 class="italic text-xl font-bold">The Kind Prison</h4>
+              <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] gap-4 xl:gap-0">
+                <p class="w-full leading-none text-xs md:text-base">Technology may help, but it is easier to make culture disturbing..</p>
+                <p class="w-full text-right font-bold">2023</p>
+              </div>
+            </div>
+          </div>
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="h-fit w-full overflow-hidden">
+              <img src="./assets/ub_art_competition_result.webp" alt="painting" class="group-hover:scale-105 group-hover:brightness-90 transition-all ease-in-out duration-300 w-full h-full object-cover object-center">
+            </div>
+            <div class="flex flex-col gap-6">
+              <h4 class="italic text-xl font-bold">Time is Valueable</h4>
+              <div class="grid grid-cols-1 xl:grid-cols-[70%_30%] gap-4 xl:gap-0">
+                <p class="w-full leading-none text-xs md:text-base">The dilemma between maintaining momentum and time that continues to diminish momentum.</p>
+                <p class="w-full text-right font-bold">2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- one columns -->
+        <div class="w-full grid grid-cols-1 md:grid-cols-2">
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="h-full w-full overflow-hidden">
+              <img src="./assets/the_hole_art.webp" alt="painting" class="group-hover:scale-105 group-hover:brightness-90 transition-all ease-in-out duration-300 w-full h-full object-cover object-center">
+            </div>
+          </div>
+          <div class="animate-observe-in hidden-observe-in group flex flex-col h-full gap-3 hover:cursor-pointer">
+            <div class="flex flex-col gap-6 md:px-5">
+              <h4 class="text-xl font-bold">The Hardest Suicide</h4>
+              <div class="grid grid-cols-1 xl:grid-cols-[70%_30%]">
+                <p class="w-full leading-none text-md md:text-base">Breeding before developing well is the beginning of poverty.</p>
+                <p class="w-full text-right font-bold">2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  <footer id="contact" class="bg-gradient-to-b from-white to-[#2a2a2a] overflow-hidden relative pt-20 pb-10">
+    <div class="px-6 md:px-12 w-full flex flex-col items-center">
+      <h1 class="text-[8vw] font-black-tight uppercase text-gray-900 leading-none tracking-tighter w-full text-center mb-10 z-10 relative drop-shadow-sm">
+        Silence Speaks Volumes
+      </h1>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 w-full max-w-7xl z-10 relative">
+        <div class="flex flex-col space-y-6 text-sm font-bold uppercase tracking-widest text-gray-800">
+          <a href="./index.html" class="hover:text-white transition">Home</a>
+          <a href="./index.html#about" class="hover:text-white transition">About</a>
+          <a href="./gallery.html" class="hover:text-white transition">Gallery</a>
+          <a href="#contact" class="hover:text-white transition">Contact</a>
+        </div>
+
+        <div class="flex flex-col items-end text-right">
+          <div class="">
+            <p class="font-bold text-lg mb-4 text-gray-900">Check my acivities at</p>
+          </div>
+            
+          <div class="flex flex-col items-end gap-2">
+            <a href="https://www.instagram.com/uund14" target="_blank" class="text-sm font-bold tracking-widest btn btn-outline px-3 btn-sm btn-outline border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white">Instagram</a>
+            <a href="https://www.linkedin.com/in/ihyaulumuddin" target="_blank" class="text-sm font-bold tracking-widest btn btn-outline px-3 btn-sm btn-outline border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white">LinkedIn</a>
+            <a href="https://www.undev.fun" target="_blank" class="text-sm font-bold tracking-widest btn btn-outline px-3 btn-sm btn-outline border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white">Personal Web</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full text-white max-w-7xl mt-20 flex flex-col items-center sm:flex-row gap-5 justify-between text-xs font-medium text-gray-800 uppercase">
+        <p>ulumuddinihya022@gmail.com</p>
+        <p>All Rights Reserved © 2026</p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
